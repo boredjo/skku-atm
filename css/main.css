@@ -1,0 +1,55 @@
+/* General CSS */
+html {
+    background-color:lightcyan;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: normal;
+    color:darkcyan; 
+    margin: 20px;
+}
+
+p {
+    font-size: larger;
+    margin: 0px;
+}
+
+input {
+    height: 25px;
+    width: 250px;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+    margin: 10px;
+    font-size: larger;
+}
+
+.cyan-black-border {
+    border: 2px darkcyan solid;
+    border-right-color: black;
+    border-bottom-color: black;
+    border-radius: 10px;
+}
+
+.page-wrapper{
+    display: none;
+}
+
+object {
+    width: 100vw;
+    height: 100vh;
+}
+ 
+a:hover {
+    color: black;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+

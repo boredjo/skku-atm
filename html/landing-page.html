@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../css/main.css">
+        <link rel="stylesheet" type="text/css" href="../css/landing-page.css">
+        <script src="../javascript/landing-page.js"></script>
+        <script src="../javascript/return-card.js"></script>
+        <title>Midterm</title>
+    </head>
+    <body>
+       
+    <h1>
+    SKKU ATM
+    </h1> 
+    <p id="task">Enter your 16 digit account number or insert your card below:</p>
+    <div>
+        <input placeholder="Enter Account Number" class="cyan-black-border" type="password" id="inputLine" onenter="enterNumber();">
+        <div class="numberpad">
+            <button id="numberpad01" class="cyan-black-border" onclick="addNumber(1);">1</button>
+            <button id="numberpad02" class="cyan-black-border" onclick="addNumber(2);">2</button>
+            <button id="numberpad03" class="cyan-black-border" onclick="addNumber(3);">3</button>
+            <button id="numberpad04" class="cyan-black-border" onclick="addNumber(4);">4</button>
+            <button id="numberpad05" class="cyan-black-border" onclick="addNumber(5);">5</button>
+            <button id="numberpad06" class="cyan-black-border" onclick="addNumber(6);">6</button>
+            <button id="numberpad07" class="cyan-black-border" onclick="addNumber(7);">7</button>
+            <button id="numberpad08" class="cyan-black-border" onclick="addNumber(8);">8</button>
+            <button id="numberpad09" class="cyan-black-border" onclick="addNumber(9);">9</button>
+            <button id="numberpadEnter" class="cyan-black-border" style="color: green" onclick="enterNumber();">Enter</button>
+            <button id="numberpad00" class="cyan-black-border" onclick="addNumber(0);">0</button>
+            <button id="numberpadDel" class="cyan-black-border" style="color: red;" onclick="deleteNumber();">Del</button>
+        </div>
+    </div>
+    <div class="return-button-wrapper"  id="returnButton" style="display:none;">
+        <button class="return-button" onclick="returnCard();">Retrun Card</button>
+    </div>  
+    </body>
+</html>
+

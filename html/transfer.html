@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../css/main.css">
+        <link rel="stylesheet" type="text/css" href="../css/landing-page.css">
+        <link rel="stylesheet" type="text/css" href="../css/transfer.css">
+        <script src="../javascript/transfer.js"></script>
+        <script src="../javascript/return-card.js"></script>
+        <title>Midterm</title>
+    </head>
+    <body>
+       <h1>
+        Transfer Money
+       </h1> 
+       <p id="task">Enter the amount to transfer:</p>
+       <div class="wrapper"   id="numberpad">
+        <div class="account-selct-group left">
+            <h2>From:</h2>
+            <select id="fromSelect">
+                <option value="" disabled selected>Select account</option>
+            </select>
+            
+        </div>
+        <div class="account-selct-group right">
+            <h2>To:</h2>
+            <select id="toSelect">
+                <option value="" disabled selected>Select account</option>
+            </select>     
+        </div>
+
+        <input placeholder="Enter Amount" class="cyan-black-border" id="inputLine" onenter="enterNumber();">
+        <div class="numberpad">
+            <button id="numberpad01" class="cyan-black-border" onclick="addNumber(1);">1</button>
+            <button id="numberpad02" class="cyan-black-border" onclick="addNumber(2);">2</button>
+            <button id="numberpad03" class="cyan-black-border" onclick="addNumber(3);">3</button>
+            <button id="numberpad04" class="cyan-black-border" onclick="addNumber(4);">4</button>
+            <button id="numberpad05" class="cyan-black-border" onclick="addNumber(5);">5</button>
+            <button id="numberpad06" class="cyan-black-border" onclick="addNumber(6);">6</button>
+            <button id="numberpad07" class="cyan-black-border" onclick="addNumber(7);">7</button>
+            <button id="numberpad08" class="cyan-black-border" onclick="addNumber(8);">8</button>
+            <button id="numberpad09" class="cyan-black-border" onclick="addNumber(9);">9</button>
+            <button id="numberpad00" class="cyan-black-border" onclick="addNumber(0);">0</button>
+            <button id="numberpadDot" class="cyan-black-border" onclick="addNumber('.');">.</button>
+            <button id="numberpadDel" class="cyan-black-border" style="color: red;" onclick="deleteNumber();">Del</button>
+            <button id="numberpadDel" class="cyan-black-border" style="color: green; grid-column: 1 / span 3; width: 170px;"
+             onclick="enterNumber();">Enter</button>
+         </div>
+         <div class="return-button-wrapper"  id="returnButton">
+             <button class="return-button" onclick="window.location.href = '/html/main-menu.html';">Back</button>
+         </div> 
+     </div>
+
+     
+
+     <div class="wrapper" style="display:none;" id="confiramtion">
+         <p id="balance">$0</p>
+         <p id="fromAccount">From: 1234567890123456</p> 
+         <p id="toAccount">To: 1234567890123456</p> 
+         <div class="button-row">
+             <button class="yes-button" onclick="writeTransaction();">Yes</button>
+             <button class="return-button" onclick="window.location.href = '/html/deposit.html';">No</button>
+         </div>
+
+     </div>
+     
+     <div class="wrapper" style="display:none;" id="success">
+         <img src="../assets/checkmark.png">
+         <div class="button-row">
+             <button class="black-button" onclick="window.location.href = '/html/main-menu.html';">Home</button>
+             <button class="black-button" onclick="window.location.href = '/html/transfer.html';">Perform another transaction</button>
+             <button class="return-button" onclick="returnCard();">Return Card</button>
+         </div>
+     </div>
+    </body>
+</html>

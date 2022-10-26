@@ -1,0 +1,40 @@
+.numberpad {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    max-width: 170px;
+    margin: auto;
+}
+
+.numberpad > button {
+    height: 50px;
+    width:  50px;
+    font-weight: bold;
+    color: black;
+    font-size: medium;
+    padding: 2px;
+    background-color: lightgray;
+}
+
+.return-button-wrapper {
+    width: 75%;
+    text-align: right;
+    margin: auto;
+    display: block;
+}
+
+.return-button {
+    background-color: #ff1010;
+    border: 2px red solid;
+    border-radius: 3px;
+    border-right-color: maroon;
+    border-bottom-color: maroon;
+    padding: 10px;
+    color: white;
+    font-size: medium;
+    margin-top: 20px;
+}
+
+.return-button:hover {
+    background-color: maroon;
+}

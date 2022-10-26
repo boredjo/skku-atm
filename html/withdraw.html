@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../css/main.css">
+        <link rel="stylesheet" type="text/css" href="../css/landing-page.css">
+        <link rel="stylesheet" type="text/css" href="../css/withdraw.css">
+        <script src="../javascript/withdraw.js"></script>
+        <script src="../javascript/return-card.js"></script>
+        <title>Midterm</title>
+    </head>
+    <body>
+        <h1>
+            Withdraw Money
+        </h1> 
+        <p id="task">Enter the amount to withdraw:</p>
+        <div class="wrapper" id="quick-links">
+            <div class="quick-links-box left">
+                <p>Quick Links</p>
+                <div class="quick-links">
+                    <button class="black-button" onclick="withdraw(20);">20</button>
+                    <button class="black-button" onclick="withdraw(40);">40</button>
+                    <button class="black-button" onclick="withdraw(60);">60</button>
+                    <button class="black-button" onclick="withdraw(80);">80</button>
+                </div>
+                
+            </div>
+
+            <div class="quick-links-box right">
+                <p>Quick Links</p>
+                <div class="quick-links">
+                    <button class="black-button" onclick="withdraw(100);">100</button>
+                    <button class="black-button" onclick="withdraw(200);">200</button>
+                    <button class="black-button" onclick="withdraw(300);">300</button>
+                    <button class="return-button black-button" onclick="window.location.href = '/html/main-menu.html';">Back</button>
+                </div>
+                
+            </div>
+
+            <div class="selection-column quick-links-box center">
+                <img src="../assets/uparrow100copy.png"
+                    onmouseover="this.src='../assets/uparrow100copyhover.png';"
+                    onmouseout="this.src='../assets/uparrow100copy.png';"
+                    onclick="addNumber(100);">
+                <img src="../assets/uparrow20copy.png"
+                    onmouseover="this.src='../assets/uparrow20copyhover.png';"
+                    onmouseout="this.src='../assets/uparrow20copy.png';"
+                    onclick="addNumber(20);">
+                <div class="button-row" id="input-row">
+                    <input value="0" class="cyan-black-border" id="inputLine" onenter="enterNumber();">
+                    <button class="yes-button" onclick="enterNumber();">Enter</button>
+                </div>
+                <img src="../assets/downarrow20copy.png"
+                    onmouseover="this.src='../assets/downarrow20copyhover.png';"
+                    onmouseout="this.src='../assets/downarrow20copy.png';"
+                    onclick="addNumber(-20);">
+                <img src="../assets/downarrow100copy.png"
+                    onmouseover="this.src='../assets/downarrow100copyhover.png';"
+                    onmouseout="this.src='../assets/downarrow100copy.png';"
+                    onclick="addNumber(-100);">
+            </div>
+        </div>
+
+        <div class="wrapper" style="display:none;" id="confiramtion">
+            <p id="balance">$0?</p>
+            <div class="button-row">
+                <button class="yes-button" onclick="writeTransaction();">Yes</button>
+                <button class="return-button" onclick="window.location.href = '/html/withdraw.html';">No</button>
+            </div>
+        </div>
+        
+        <div class="wrapper" style="display:none;" id="success">
+            <img src="../assets/checkmark.png">
+            <div class="button-row">
+                <button class="black-button" onclick="window.location.href = '/html/main-menu.html';">Home</button>
+                <button class="black-button" onclick="window.location.href = '/html/withdraw.html';">Withdraw again</button>
+                <button class="return-button" onclick="returnCard();">Return Card</button>
+            </div>
+        </div>
+
+    </body>
+</html>
